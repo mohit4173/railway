@@ -36,7 +36,7 @@ async def stream_data():
             record['spo2_start'] = random.randint(50, 120)
             record['spo2_end'] = random.randint(80, 175)
 
-            yield json.dumps(record)
+            yield json.dumps(record) + '\n'
             num_records += 1
             await asyncio.sleep(1)
 
